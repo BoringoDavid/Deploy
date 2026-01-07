@@ -2,7 +2,10 @@
   "builds": [
     {
       "src": "demo/wsgi.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "buildCommand": "python manage.py collectstatic --noinput"
+      }
     }
   ],
   "routes": [
